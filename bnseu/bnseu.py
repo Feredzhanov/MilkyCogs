@@ -24,7 +24,7 @@ class bnseu:
 		# URLs
 		BNS_WEB_PROFILE = 'http://{region}-bns.ncsoft.com/ingame/bs/character/profile?c={name}'
 		BNS_WEB_SEARCH = 'http://{region}-bns.ncsoft.com/ingame/bs/character/search/info?c={name}'
-		BNS_REGION = 'na'
+		BNS_REGION = 'eu'
 
 		id = None
 		class_name = None
