@@ -105,9 +105,8 @@ class bnseu:
 			faction = faction_texts[0]
 			factionLevel = faction_texts[1]
 	
-	# Player Stats
-
-	stats = content.xpath('//span[@class="stat-point"]/text()')
+		# Player Stats
+		stats = content.xpath('//span[@class="stat-point"]/text()')
 
 		# Player Equipments
 		equips = content.xpath('//div[@class="name"]/span/text()')
