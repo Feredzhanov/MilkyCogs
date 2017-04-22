@@ -106,7 +106,8 @@ class bnseu:
 			factionLevel = faction_texts[1]
 	
 	# Player Stats
-		stats = content.xpath('//span[@class="stat-point"]/text()')
+
+	stats = content.xpath('//span[@class="stat-point"]/text()')
 
 		# Player Equipments
 		equips = content.xpath('//div[@class="name"]/span/text()')
@@ -141,7 +142,10 @@ class bnseu:
 			'Ring     : {ring}\n' \
 			'Bracelet : {bracelet}\n' \
 			'Belt     : {belt}\n' \
-			'Soul     : {soul}```'
+			'Soul     : {soul}\n' \
+			'Pet      : {guard}\n' \
+			'Badge    : {singongpae}```'
+			
 		
 		# Check for empty equipment
 		weapon = equips[0]
@@ -151,6 +155,8 @@ class bnseu:
 		bracelet = equips[4]
 		belt = equips[5]
 		soul = equips[6]
+		guard = equips[7]
+		singongpae = equips[8]
 
 		if weapon == 'Weapon':
 			weapon = 'No Weapon'
@@ -166,6 +172,10 @@ class bnseu:
 			bracelet = 'No Bracelet'
 		if soul == 'Soul':
 			soul = 'This person has no soul'
+		if guard == 'Pet':
+			guard = 'This person has no pet'
+		if singongpae == 'Badge':
+			singongpae = 'This person has no Soul Badge'
 		
 		# Displaying the output
 		output = result.format(name=outputName,
@@ -200,7 +210,9 @@ class bnseu:
 			ring = ring,
 			bracelet = bracelet,
 			belt = belt,
-			soul = soul)
+			soul = soul,
+			guard = guard,
+			singongpae = singongpae)
 
 		await self.bot.say(output)
 
